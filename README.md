@@ -46,7 +46,7 @@ E.g.
   https://exchange.xforce.ibmcloud.com/ip/104.171.117.108
   https://exchange.xforce.ibmcloud.com/url/smartertools.com
 ````
-Any mail that has been processed by spool filtering can be found by searcing the Delivery log using the following;  
+Any mail that has been processed by spool filtering can be found by searching the Delivery log using the following;  
   To find email delivered to the inbox search for 'Filter: None'  
   To find email delivered to the junk email folder (SPAM-LOW) search for 'Filter: Move spam'  
   To find all email deleted by spool filtering search for 'Filter: Spam'  
