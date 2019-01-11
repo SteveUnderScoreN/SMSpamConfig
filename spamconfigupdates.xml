@@ -1,0 +1,704 @@
+  <ReverseDNSEnabled>True</ReverseDNSEnabled>
+  <ReverseDNSSmtpEnabled>True</ReverseDNSSmtpEnabled>
+  <ReverseDNSOutgoingSmtpEnabled>False</ReverseDNSOutgoingSmtpEnabled>
+  <ReverseDNSWeight>10</ReverseDNSWeight>
+  <NullSenderEnabled>False</NullSenderEnabled>
+  <NullSenderWeight>10</NullSenderWeight>
+  <NullSenderSmtpEnabled>False</NullSenderSmtpEnabled>
+  <SpfEnabled>True</SpfEnabled>
+  <SpfSmtpEnabled>True</SpfSmtpEnabled>
+  <SpfOutgoingSmtpEnabled>False</SpfOutgoingSmtpEnabled>
+  <SpfScanFromHeader>False</SpfScanFromHeader>
+  <SpfFailWeight>10</SpfFailWeight>
+  <SpfSoftFailWeight>4</SpfSoftFailWeight>
+  <SpfNeutralWeight>0</SpfNeutralWeight>
+  <SpfNoneWeight>0</SpfNoneWeight>
+  <SpfNoRecordWeight>0</SpfNoRecordWeight>
+  <SpfPassWeight>0</SpfPassWeight>
+  <SpfPermErrorWeight>2</SpfPermErrorWeight>
+  <SpfTempErrorWeight>0</SpfTempErrorWeight>
+  <SpfSrsEnabled>True</SpfSrsEnabled>
+  <DkPassWeight>-2</DkPassWeight>
+  <DkFailWeight>2</DkFailWeight>
+  <DkNoneWeight>0</DkNoneWeight>
+  <DkEnabled>False</DkEnabled>
+  <DkMessageSign>0</DkMessageSign>
+  <DkMessageVerify>1</DkMessageVerify>
+  <DkimPassWeight>0</DkimPassWeight>
+  <DkimFailWeight>10</DkimFailWeight>
+  <DkimNoneWeight>0</DkimNoneWeight>
+  <DkimEnabled>True</DkimEnabled>
+  <DkimMessageSign>0</DkimMessageSign>
+  <DkimMessageVerify>100</DkimMessageVerify>
+  <SpamIp4rLookup>
+    <name>Anonmails DNSBL</name>
+    <domainLookup>spam.dnsbl.anonmails.de</domainLookup>
+    <description>DNSBL spam.dnsbl.anonmails.de</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Barracuda Reputation Block List</name>
+    <domainLookup>b.barracudacentral.org</domainLookup>
+    <description>http://www.barracudanetworks.com/reputation</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>CBL</name>
+    <domainLookup>cbl.abuseat.org</domainLookup>
+    <description>CBL</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>DNSWL -  Low</name>
+    <domainLookup>list.dnswl.org</domainLookup>
+    <description>Occasional spam occurrences</description>
+    <weight>-2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.1.1, 127.0.2.1, 127.0.3.1, 127.0.4.1, 127.0.5.1, 127.0.6.1, 127.0.7.1, 127.0.8.1, 127.0.9.1, 127.0.10.1, 127.0.11.1, 127.0.12.1, 127.0.13.1, 127.0.14.1, 127.0.15.1</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>DNSWL - Blocked</name>
+    <domainLookup>list.dnswl.org</domainLookup>
+    <description>Query refused</description>
+    <weight>0</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.255</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>False</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>DNSWL - High</name>
+    <domainLookup>list.dnswl.org</domainLookup>
+    <description>Never sends spam</description>
+    <weight>-6</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.1.3, 127.0.2.3, 127.0.3.3, 127.0.4.3, 127.0.5.3, 127.0.6.3, 127.0.7.3, 127.0.8.3, 127.0.9.3, 127.0.10.3, 127.0.11.3, 127.0.12.3, 127.0.13.3, 127.0.14.3, 127.0.15.3</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>DNSWL - Medium</name>
+    <domainLookup>list.dnswl.org</domainLookup>
+    <description>Extremely rare spam occurrences</description>
+    <weight>-4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.1.2, 127.0.2.2, 127.0.3.2, 127.0.4.2, 127.0.5.2, 127.0.6.2, 127.0.7.2, 127.0.8.2, 127.0.9.2, 127.0.10.2, 127.0.11.2, 127.0.12.2, 127.0.13.2, 127.0.14.2, 127.0.15.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>DNSWL - None</name>
+    <domainLookup>list.dnswl.org</domainLookup>
+    <description>Legitimate mail server, may also send spam</description>
+    <weight>-2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.1.0, 127.0.2.0, 127.0.3.0, 127.0.4.0, 127.0.5.0, 127.0.6.0, 127.0.7.0, 127.0.8.0, 127.0.9.0, 127.0.10.0, 127.0.11.0, 127.0.12.0, 127.0.13.0, 127.0.14.0, 127.0.15.0</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Habeas other score</name>
+    <domainLookup>accredit.habeas.com</domainLookup>
+    <description />
+    <weight>0</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>False</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Habeas SafeList 127.0.0.30</name>
+    <domainLookup>accredit.habeas.com</domainLookup>
+    <description>Not certified?</description>
+    <weight>0</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.30</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Habeas SafeList 127.0.0.50</name>
+    <domainLookup>accredit.habeas.com</domainLookup>
+    <description>Return Path SenderScore Safe List - certified?</description>
+    <weight>-2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.50</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>HostKarma - Blacklist</name>
+    <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
+    <description>HostKarma - Blacklist</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>HostKarma - Brownlist</name>
+    <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
+    <description>HostKarma - Brownlist</description>
+    <weight>3</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.4</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>HostKarma - Whitelist</name>
+    <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
+    <description>HostKarma - Whitelist</description>
+    <weight>-4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.1</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>HostKarma - Yellowlist</name>
+    <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
+    <description>Yellowlist - mix of spam and nonspam</description>
+    <weight>2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.3</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>IBM DNS Blacklist</name>
+    <domainLookup>dnsbl.cobion.com</domainLookup>
+    <description />
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.1</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>ISX DNSBL</name>
+    <domainLookup>dnsbl.isx.fr</domainLookup>
+    <description>https://bl.isx.fr/</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>RBLDNS</name>
+    <domainLookup>rbl.rbldns.ru</domainLookup>
+    <description>http://rbldns.ru/</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SEM-FRESH</name>
+    <domainLookup>fresh.spameatingmonkey.net</domainLookup>
+    <description>List includes domains first registered in the last 5 days</description>
+    <weight>1</weight>
+    <maxweight>5</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SEM-URI</name>
+    <domainLookup>uribl.spameatingmonkey.net</domainLookup>
+    <description>List includes domains and URIs detected in mail sent to a spamtrap</description>
+    <weight>4</weight>
+    <maxweight>20</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Sender Score 0-9</name>
+    <domainLookup>score.senderscore.com</domainLookup>
+    <description>Bad reputation</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.4.0, 127.0.4.1, 127.0.4.2, 127.0.4.3, 127.0.4.4, 127.0.4.5, 127.0.4.6, 127.0.4.7, 127.0.4.8, 127.0.4.9</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Sender Score 95-99</name>
+    <domainLookup>score.senderscore.com</domainLookup>
+    <description>Good reputation</description>
+    <weight>-4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.4.95, 127.0.4.96, 127.0.4.97, 127.0.4.98, 127.0.4.99</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - Abuse</name>
+    <domainLookup>dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - Abuse</description>
+    <weight>2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.7</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - Dynamic IP</name>
+    <domainLookup>dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - Dynamic IP</description>
+    <weight>3</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.10</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - No Server</name>
+    <domainLookup>noserver.dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - No Server</description>
+    <weight>10</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.14</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - NoMail</name>
+    <domainLookup>nomail.rhsbl.sorbs.net</domainLookup>
+    <description>SORBS - NoMail</description>
+    <weight>10</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.12</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - Proxy</name>
+    <domainLookup>dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - Proxy</description>
+    <weight>1</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.4</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - Recent</name>
+    <domainLookup>recent.spam.dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - Recent</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.6</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SORBS - Socks</name>
+    <domainLookup>dnsbl.sorbs.net</domainLookup>
+    <description>SORBS - Socks</description>
+    <weight>1</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.3</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SpamCop</name>
+    <domainLookup>bl.spamcop.net</domainLookup>
+    <description>SpamCop</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - CSS</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Direct snowshoe spam sources detected via automation</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.3</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - PBL</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Spamhaus - PBL</description>
+    <weight>2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.10</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - PBL2</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Spamhaus - PBL2</description>
+    <weight>2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.11</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - SBL</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Spamhaus - SBL</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - XBL</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Spamhaus - XBL</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.4</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>False</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus - XBL2</name>
+    <domainLookup>zen.spamhaus.org</domainLookup>
+    <description>Spamhaus - XBL2</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.5</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>False</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Spamhaus DBL</name>
+    <domainLookup>dbl.spamhaus.org</domainLookup>
+    <description>https://www.spamhaus.org/dbl/</description>
+    <weight>4</weight>
+    <maxweight>20</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.1.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SpamRats</name>
+    <domainLookup>spam.spamrats.com</domainLookup>
+    <description>SpamRats</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.38</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>SURBL</name>
+    <domainLookup>multi.surbl.org</domainLookup>
+    <description>SURBL</description>
+    <weight>4</weight>
+    <maxweight>20</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.8, 127.0.0.16, 127.0.0.24, 127.0.0.64, 127.0.0.72, 127.0.0.80, 127.0.0.88, 127.0.0.96, 127.0.0.128, 127.0.0.136, 127.0.0.144, 127.0.0.152, 127.0.0.192, 127.0.0.200, 127.0.0.208, 127.0.0.216</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Surriel</name>
+    <domainLookup>psbl.surriel.com</domainLookup>
+    <description>Surriel</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>Truncate DNSBL</name>
+    <domainLookup>truncate.gbudb.net</domainLookup>
+    <description>http://www.gbudb.com/truncate/index.jsp</description>
+    <weight>3</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>UCEProtect Level 1</name>
+    <domainLookup>dnsbl-1.uceprotect.net</domainLookup>
+    <description>UCEProtect Level 1</description>
+    <weight>5</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>UCEProtect Level 2</name>
+    <domainLookup>dnsbl-2.uceprotect.net</domainLookup>
+    <description>UCEProtect Level 2</description>
+    <weight>4</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>UCEProtect Level 3</name>
+    <domainLookup>dnsbl-3.uceprotect.net</domainLookup>
+    <description>UCEProtect Level 3</description>
+    <weight>2</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>False</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>True</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>URIBL</name>
+    <domainLookup>multi.uribl.com</domainLookup>
+    <description>URIBL 2=black(set to 6) 4=grey(set to 4) 8=red(set to 2)</description>
+    <weight>6</weight>
+    <maxweight>30</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.2, 127.0.0.4, 127.0.0.8, 127.0.0.14</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>False</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>URIBL Black</name>
+    <domainLookup>multi.uribl.com</domainLookup>
+    <description>http://uribl.com/about.shtml. This list has a goal of zero false positives</description>
+    <weight>4</weight>
+    <maxweight>20</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.2</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>URIBL Grey</name>
+    <domainLookup>multi.uribl.com</domainLookup>
+    <description>http://uribl.com/about.shtml. This list can and probably will cause false positives</description>
+    <weight>2</weight>
+    <maxweight>10</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.4</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
+  <SpamIp4rLookup>
+    <name>URIBL Red</name>
+    <domainLookup>multi.uribl.com</domainLookup>
+    <description>http://uribl.com/about.shtml. This list is automated in nature, so please use at your own risk.</description>
+    <weight>3</weight>
+    <maxweight>15</maxweight>
+    <useBitmap>False</useBitmap>
+    <isURIBL>True</isURIBL>
+    <requiredIP>127.0.0.8</requiredIP>
+    <requireLookupMatch>True</requireLookupMatch>
+    <enabled>True</enabled>
+    <smtpenabled>False</smtpenabled>
+    <smtpoutgoingenabled>False</smtpoutgoingenabled>
+  </SpamIp4rLookup>
