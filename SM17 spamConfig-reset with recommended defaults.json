@@ -949,7 +949,7 @@
         "127.0.0.2"
       ],
       "use_bitmap": false,
-      "weight": 3,
+      "weight": 5,
       "weight_max": 30
     },
     {
