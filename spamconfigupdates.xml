@@ -594,7 +594,7 @@
     <name>Truncate DNSBL</name>
     <domainLookup>truncate.gbudb.net</domainLookup>
     <description>http://www.gbudb.com/truncate/index.jsp</description>
-    <weight>3</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
