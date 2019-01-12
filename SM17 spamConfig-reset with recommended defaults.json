@@ -10,7 +10,7 @@
     "medium_action": 1,
     "medium_action_data": "",
     "low_weight": 10,
-    "low_action": 6,
+    "low_action": 4,
     "low_action_data": "",
     "outgoing_block_enabled": false,
     "outgoing_block_threshold": 30,
