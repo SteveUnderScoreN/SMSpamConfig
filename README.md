@@ -1,4 +1,4 @@
-## SmarterMail Spam configuration recommended settings in XML and JSON format.
+## SmarterMail Antispam configuration recommended settings in XML and JSON format.
 The configuration is based on fast DNS server being required and dedicated servers being recommended.
 DNS should only use root hints beyond the network edge and not forwarders.
 If using more than 100,000 queries per day register with the provider, consider using rsync and only use
