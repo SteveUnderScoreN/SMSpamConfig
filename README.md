@@ -79,3 +79,4 @@ Any mail that has been processed by spool filtering can be found by searching th
   To find email delivered to the junk email folder (SPAM-LOW) search for 'Filter: Move spam'  
   To find all email deleted by spool filtering search for 'Filter: Spam'  
   To find email that would have been identified as SPAM-MED but was deleted by spool filtering search for 'Filter: Spam (Weight: 2'  
+To see the score assigned to an email look at the 'X-SmarterMail-Spam' and the 'X-SmarterMail-TotalSpamWeight' headers e.g within the Webmail interface highlight an email, click 'Actions/View Header'
