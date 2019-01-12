@@ -1,16 +1,26 @@
 ## SmarterMail Spam configuration recommended settings in XML and JSON format.
 The configuration is based on fast DNS server being required and dedicated servers being recommended.
 DNS should only use root hints beyond the network edge and not forwarders.
-If using more than 100,000 queries per day customers need to register with the provider and only use
-non registered services on spool filtering (registered on both) along with an inbound weight SMTP blocking.
+If using more than 100,000 queries per day register with the provider, consider using rsync and only use
+non registered services on spool filtering (registered on both) along with inbound weight SMTP blocking.
+
+## Adjusting weight values
+If you are testing these settings or you prefer to have some borderline Spam go into the junk email folder for review  
+add 5 to each of the following;
+```
+Settings/Antispam/Options/Options/Filtering/Low Probability of Being Spam  
+Settings/Antispam/Options/Options/Filtering/Medium Probability of Being Spam  
+Settings/Antispam/Options/Options/Filtering/High Probability of Being Spam  
+Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
+```
 
 ## Recommended Antispam options for SM16
 .. (XML to be provided)  
 The following settings do not exist in the XML configuration file and need to be set through the web interface;  
 ```
-  Options/Options/Autoresponders                       - Require message pass SPF  
-  Options/Options/Content Filter Bouncing              - Require message pass SPF  
-  Options/Options/Enable DMARC policy compliance check - Enabled  
+Settings/Antispam/Options/Options/Autoresponders                       - Require message pass SPF  
+Settings/Antispam/Options/Options/Content Filter Bouncing              - Require message pass SPF  
+Settings/Antispam/Options/Options/Enable DMARC policy compliance check - Enabled  
 ```
 
 ## RBL/URIBL settings for SM16
@@ -18,14 +28,14 @@ Export the current Antispam settings and take a copy of your exported spamconfig
 Download spamconfigupdates.xml from this repositiry  
 Edit the spamconfig.xml and find the line;  
 ```
-    <ReverseDNSEnabled>True</ReverseDNSEnabled>
+<ReverseDNSEnabled>True</ReverseDNSEnabled>
 ```  
 Replace that line and everything below (except the last line) with the contents of the spamconfigupdates.xml  
 It should end;  
 ```
-    <smtpoutgoingenabled>False</smtpoutgoingenabled>
-   </SpamIp4rLookup>
-  </SpamOptions>
+  <smtpoutgoingenabled>False</smtpoutgoingenabled>
+ </SpamIp4rLookup>
+</SpamOptions>
 ```  
 Save the file and import it into SM.
 Any concerns and you can import your backup file.
@@ -42,9 +52,9 @@ Use ```https://exchange.xforce.ibmcloud.com/ip/%ConnectingIPAdress%``` to get th
 Use ```https://exchange.xforce.ibmcloud.com/url/%SendingDomain%``` to get the IBM X-Force report on the sending domain.  
 E.g.  
 ```
-  http://multirbl.valli.org/lookup/104.171.117.108.html
-  https://exchange.xforce.ibmcloud.com/ip/104.171.117.108
-  https://exchange.xforce.ibmcloud.com/url/smartertools.com
+http://multirbl.valli.org/lookup/104.171.117.108.html
+https://exchange.xforce.ibmcloud.com/ip/104.171.117.108
+https://exchange.xforce.ibmcloud.com/url/smartertools.com
 ````
 Any mail that has been processed by spool filtering can be found by searching the Delivery log using the following;  
   To find email delivered to the inbox search for 'Filter: None'  
