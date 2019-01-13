@@ -4,7 +4,7 @@ DNS should only use root hints beyond the network edge and not forwarders.
 If using more than 100,000 queries per day register with the provider, consider using rsync and only use
 non registered services on spool filtering (registered on both) along with inbound weight SMTP blocking.  
 These settings are designed to reject any mail from IP addresses that achieve a total weight of 30 or above
-when the source addresss is test by;
+when the source address is test by;
 - Checking that a valid reverse DNS entry (PTR) exists
 - Checking the address listing on any block list enabled for 'Incoming SMTP' blocking
 - Checking the IP address against the SPF record of the domain from the envelope 'Mail From' header (senderEmail(1))
@@ -32,7 +32,7 @@ Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
 ```
 
 ## Recommended Antispam options for SM16
-Export the current Antispam settings as a backup and import 'SM16 spamConfig-reset with recommended defaults.xml' from this repositiry.  
+Export the current Antispam settings as a backup and import 'SM16 spamConfig-reset with recommended defaults.xml' from this repository.  
 The following settings do not exist in the XML configuration file and need to be set through the web interface;  
 ```
 Settings/Antispam/Options/Options/Autoresponders                       - Require message pass SPF  
@@ -42,10 +42,10 @@ Settings/Antispam/Options/Options/Enable DMARC policy compliance check - Enabled
 Greylisting is not required when using these settings but it is not set to disabled when importing this policy.
 
 ## Recommended Antispam options for SM17
-Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repositiry.  
+Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repository.  
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM16
-Export the current Antispam settings and take a copy of your exported spamconfig.xml as a backup  
-Download 'SM16 spamConfig updates.xml from this repositiry  
+Export the current Antispam settings and take a copy of your exported spamConfig.xml as a backup.  
+Download 'SM16 spamConfig updates.xml' from this repository  
 Edit the spamconfig.xml and find the line;  
 ```
 <ReverseDNSEnabled>True</ReverseDNSEnabled>
@@ -58,10 +58,13 @@ It should end;
 </SpamOptions>
 ```  
 Save the file and import it into SM.
-Any concerns and you can import your backup file.
+Verify the configuration in the web interface.
 
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM17
-.. (JSON to be provided or maybe a PowerShell script)
+Export the current Antispam settings and take a copy of your exported spamConfig.json as a backup.  
+Download 'SM17 spamConfig updates.ps1' from this repository and modify the first line to reflect the location of the spamConfig.json file.
+Run the script and import the spamConfig.json file into SM.
+Verify the configuration in the web interface.
 
 ## Troubleshooting
 Any incoming mail that has been rejected by the 'SMTP Blocking/Incoming Weight Threshold' feature can be found  
@@ -82,4 +85,4 @@ Any mail that has been processed by spool filtering can be found by searching th
   To find email delivered to the junk email folder (SPAM-LOW) search for 'Filter: Move spam'  
   To find all email deleted by spool filtering search for 'Filter: Spam'  
   To find email that would have been identified as SPAM-MED but was deleted by spool filtering search for 'Filter: Spam (Weight: 2'  
-To see the score assigned to an email look at the 'X-SmarterMail-Spam' and the 'X-SmarterMail-TotalSpamWeight' headers e.g within the Webmail interface highlight an email, click 'Actions/View Header'
+To see the score assigned to an email look at the 'X-SmarterMail-Spam' and the 'X-SmarterMail-TotalSpamWeight' headers e.g. within the Webmail interface highlight an email, click 'Actions/View Header'
