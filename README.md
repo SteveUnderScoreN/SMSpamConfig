@@ -43,7 +43,7 @@ Greylisting is not required when using these settings but it is not set to disab
 
 ## Recommended Antispam options for SM17
 Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repositiry.  
-## RBL/URIBL settings for SM16
+## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM16
 Export the current Antispam settings and take a copy of your exported spamconfig.xml as a backup  
 Download 'SM16 spamConfig updates.xml from this repositiry  
 Edit the spamconfig.xml and find the line;  
@@ -60,8 +60,8 @@ It should end;
 Save the file and import it into SM.
 Any concerns and you can import your backup file.
 
-## RBL/URIBL settings for SM17
-.. (JSON to be provided)
+## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM17
+.. (JSON to be provided or maybe a PowerShell script)
 
 ## Troubleshooting
 Any incoming mail that has been rejected by the 'SMTP Blocking/Incoming Weight Threshold' feature can be found  
