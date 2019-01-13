@@ -45,7 +45,7 @@ Greylisting is not required when using these settings but it is not set to disab
 Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repositiry.  
 ## RBL/URIBL settings for SM16
 Export the current Antispam settings and take a copy of your exported spamconfig.xml as a backup  
-Download SM16spamconfigupdates.xml from this repositiry  
+Download 'SM16 spamConfig updates.xml from this repositiry  
 Edit the spamconfig.xml and find the line;  
 ```
 <ReverseDNSEnabled>True</ReverseDNSEnabled>
