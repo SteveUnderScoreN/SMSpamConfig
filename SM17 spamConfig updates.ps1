@@ -1,5 +1,5 @@
 $SpamConfigExport = "C:\Temp\spamConfig.json"
-$SpamConfig = ConvertFrom-Json -InputObject ((Get-Content -Path $SpamConfigJSON) -join "`n")
+$SpamConfig = ConvertFrom-Json -InputObject ((Get-Content -Path $SpamConfigExport) -join "`n")
 $SpamConfig.spam_settings.reverse_dns_enabled ="true"
 $SpamConfig.spam_settings.reverse_dns_enabled_smtp ="true"
 $SpamConfig.spam_settings.reverse_dns_enabled_smtp_out ="false"
