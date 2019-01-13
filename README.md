@@ -32,17 +32,20 @@ Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
 ```
 
 ## Recommended Antispam options for SM16
-.. (XML to be provided)  
+Export the current Antispam settings as a backup and import 'SM16 spamConfig-reset with recommended defaults.xml' from this repositiry.  
 The following settings do not exist in the XML configuration file and need to be set through the web interface;  
 ```
 Settings/Antispam/Options/Options/Autoresponders                       - Require message pass SPF  
 Settings/Antispam/Options/Options/Content Filter Bouncing              - Require message pass SPF  
 Settings/Antispam/Options/Options/Enable DMARC policy compliance check - Enabled  
 ```
+Greylisting is not required when using these settings but it is not set to disabled when importing this policy.
 
+## Recommended Antispam options for SM17
+Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repositiry.  
 ## RBL/URIBL settings for SM16
 Export the current Antispam settings and take a copy of your exported spamconfig.xml as a backup  
-Download spamconfigupdates.xml from this repositiry  
+Download SM16spamconfigupdates.xml from this repositiry  
 Edit the spamconfig.xml and find the line;  
 ```
 <ReverseDNSEnabled>True</ReverseDNSEnabled>
