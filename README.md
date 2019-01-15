@@ -32,7 +32,7 @@ Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
 ```
 
 ## Recommended Antispam options for SM16
-Export the current Antispam settings as a backup and import 'SM16 spamConfig-reset with recommended defaults.xml' from this repository.  
+Export the current Antispam settings as a backup and import ['SM16 spamConfig-reset with recommended defaults.xml'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository.  
 The following settings do not exist in the XML configuration file and need to be set through the web interface;  
 ```
 Settings/Antispam/Options/Options/Autoresponders                       - Require message pass SPF  
@@ -42,10 +42,11 @@ Settings/Antispam/Options/Options/Enable DMARC policy compliance check - Enabled
 Greylisting is not required when using these settings but it is not set to disabled when importing this policy.
 
 ## Recommended Antispam options for SM17
-Export the current Antispam settings as a backup and import 'SM17 spamConfig-reset with recommended defaults.json' from this repository.  
+Export the current Antispam settings as a backup and import ['SM17 spamConfig-reset with recommended defaults.json'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository.  
+
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM16
 Export the current Antispam settings and take a copy of your exported spamConfig.xml as a backup.  
-Download 'SM16 spamConfig updates.xml' from this repository  
+Download ['SM16 spamConfig updates.xml'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository  
 Edit the spamconfig.xml and find the line;  
 ```
 <ReverseDNSEnabled>True</ReverseDNSEnabled>
@@ -57,14 +58,16 @@ It should end;
  </SpamIp4rLookup>
 </SpamOptions>
 ```  
-Save the file and import it into SM.
+Save the file and import it into SM.  
 Verify the configuration in the web interface.
 
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM17
 Export the current Antispam settings and take a copy of your exported spamConfig.json as a backup.  
-Download 'SM17 spamConfig updates.ps1' from this repository and modify the first line to reflect the location of the spamConfig.json file.
-Run the script and import the spamConfig.json file into SM.
-Verify the configuration in the web interface.
+Download ['SM17 spamConfig updates.ps1'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository and modify the first line to reflect the location of the spamConfig.json file.  
+Run the script.  
+E.g. Run PowerShell_ISE.exe, open the script pane if needed (CTRL+R), select 'SM17 spamConfig updates.ps1' in this repository and click 'Raw', select all (CTRL+A), copy (CTRL+C) and paste the script into the PowerShell_ISE script pane (CTRL+V), modift line 1 to reflect the location of the spamConfig.json file to be modified and hit F5 to run the script.  
+Import the modified spamConfig.json file into SM.  
+Verify the configuration in the web interface. 
 
 ## Troubleshooting
 Any incoming mail that has been rejected by the 'SMTP Blocking/Incoming Weight Threshold' feature can be found  
