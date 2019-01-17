@@ -1,7 +1,7 @@
   <ReverseDNSEnabled>True</ReverseDNSEnabled>
   <ReverseDNSSmtpEnabled>True</ReverseDNSSmtpEnabled>
   <ReverseDNSOutgoingSmtpEnabled>False</ReverseDNSOutgoingSmtpEnabled>
-  <ReverseDNSWeight>10</ReverseDNSWeight>
+  <ReverseDNSWeight>8</ReverseDNSWeight>
   <NullSenderEnabled>False</NullSenderEnabled>
   <NullSenderWeight>10</NullSenderWeight>
   <NullSenderSmtpEnabled>False</NullSenderSmtpEnabled>
@@ -9,7 +9,7 @@
   <SpfSmtpEnabled>True</SpfSmtpEnabled>
   <SpfOutgoingSmtpEnabled>False</SpfOutgoingSmtpEnabled>
   <SpfScanFromHeader>False</SpfScanFromHeader>
-  <SpfFailWeight>10</SpfFailWeight>
+  <SpfFailWeight>8</SpfFailWeight>
   <SpfSoftFailWeight>4</SpfSoftFailWeight>
   <SpfNeutralWeight>0</SpfNeutralWeight>
   <SpfNoneWeight>0</SpfNoneWeight>
@@ -25,7 +25,7 @@
   <DkMessageSign>0</DkMessageSign>
   <DkMessageVerify>1</DkMessageVerify>
   <DkimPassWeight>0</DkimPassWeight>
-  <DkimFailWeight>10</DkimFailWeight>
+  <DkimFailWeight>8</DkimFailWeight>
   <DkimNoneWeight>0</DkimNoneWeight>
   <DkimEnabled>True</DkimEnabled>
   <DkimMessageSign>0</DkimMessageSign>
