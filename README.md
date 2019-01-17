@@ -1,7 +1,7 @@
 ## SmarterMail Antispam configuration recommended settings in XML and JSON format.
-The configuration is based on fast DNS server being required and dedicated servers being recommended.
-DNS should only use root hints beyond the network edge and not forwarders.
-If using more than 100,000 queries per day register with the provider, consider using rsync and only use
+The configuration is based on the requirement that the DNS servers used by the SmarterMail server are fast and it's recommended that they are dedicated to the SmarterMail server.  
+Those DNS servers should only use root hints beyond the network edge and not forwarders.
+If making more than 100,000 DNS queries per day register with the provider, consider using rsync and only use
 non registered services on spool filtering (registered on both) along with inbound weight SMTP blocking.  
 These settings are designed to reject any mail from IP addresses that achieve a total weight of 30 or above
 when the source address is test by;
@@ -19,9 +19,10 @@ If the score is below 30 the email is received into the spool for further assess
 - Any custom filters enabled for 'Spool Filtering'
 - Submitting any URI domains found in the email to the URIBLs enabled for 'Spool Filtering'
 
-If the cumulative score of these tests is below 10 the email is delivered to the inbox, if the score is from 10 to 19 the email is delivered to the junk email folder and if the score is 20 or above the email is deleted.
+If the cumulative score of these tests is below 10 the email is delivered to the inbox, if the score is from 10 to 19 the email is delivered to the junk email folder and if the score is 20 or above the email is deleted.  
+When using custom Spam checks with these settings a value of -3 is a recommended for any unwanted matches and a value of 3 is good for any rules that should weigh positively e.g. add 'handbags' with a value of 3 if your in the business of making/selling handbags.  
 
-## Adjusting weight values
+## Adjusting threshold weight values
 If you are testing these settings or you prefer to have some borderline Spam go into the junk email folder for review  
 add 5 to each of the following;
 ```
