@@ -51,7 +51,7 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -69,7 +69,7 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -169,7 +169,7 @@ $Ip4Lookups = '
             "127.0.15.3"
           ],
           "use_bitmap": false,
-          "weight": -6,
+          "weight": -5,
           "weight_max": 30
         },
         {
@@ -287,7 +287,7 @@ $Ip4Lookups = '
             "127.0.0.50"
           ],
           "use_bitmap": false,
-          "weight": -2,
+          "weight": -5,
           "weight_max": 30
         },
         {
@@ -305,7 +305,7 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -341,7 +341,7 @@ $Ip4Lookups = '
             "127.0.0.1"
           ],
           "use_bitmap": false,
-          "weight": -4,
+          "weight": -5,
           "weight_max": 30
         },
         {
@@ -377,7 +377,7 @@ $Ip4Lookups = '
             "127.0.0.1"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -431,8 +431,8 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 1,
-          "weight_max": 5
+          "weight": 3,
+          "weight_max": 3
         },
         {
           "guid": "548861ca-9413-4a55-bb2e-95a0e8c4f260",
@@ -449,8 +449,8 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
-          "weight_max": 20
+          "weight": 5,
+          "weight_max": 5
         },
         {
           "guid": "586e270a-5cf7-49fd-890f-d7eb0d6ae741",
@@ -476,7 +476,7 @@ $Ip4Lookups = '
             "127.0.4.9"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -498,7 +498,7 @@ $Ip4Lookups = '
             "127.0.4.99"
           ],
           "use_bitmap": false,
-          "weight": -4,
+          "weight": -5,
           "weight_max": 30
         },
         {
@@ -642,7 +642,7 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -678,7 +678,7 @@ $Ip4Lookups = '
             "127.0.0.10"
           ],
           "use_bitmap": false,
-          "weight": 2,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -696,7 +696,7 @@ $Ip4Lookups = '
             "127.0.0.11"
           ],
           "use_bitmap": false,
-          "weight": 2,
+          "weight": 5,
           "weight_max": 30
         },
         {
@@ -768,8 +768,8 @@ $Ip4Lookups = '
             "127.0.1.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
-          "weight_max": 20
+          "weight": 5,
+          "weight_max": 5
         },
         {
           "guid": "08649842-93c3-43b7-82c0-e864039e3866",
@@ -819,8 +819,8 @@ $Ip4Lookups = '
             "127.0.0.216"
           ],
           "use_bitmap": false,
-          "weight": 4,
-          "weight_max": 20
+          "weight": 5,
+          "weight_max": 5
         },
         {
           "guid": "ce578ba9-e4d8-486e-90b5-580cb7a6c972",
@@ -948,8 +948,8 @@ $Ip4Lookups = '
             "127.0.0.2"
           ],
           "use_bitmap": false,
-          "weight": 4,
-          "weight_max": 20
+          "weight": 5,
+          "weight_max": 5
         },
         {
           "guid": "29bc0f81-3fa4-4881-92c0-913e892841ef",
@@ -966,8 +966,8 @@ $Ip4Lookups = '
             "127.0.0.4"
           ],
           "use_bitmap": false,
-          "weight": 2,
-          "weight_max": 10
+          "weight": 3,
+          "weight_max": 3
         },
         {
           "guid": "e3b69cdb-9448-444d-9fa2-d2d3ebfb62ab",
@@ -984,8 +984,8 @@ $Ip4Lookups = '
             "127.0.0.8"
           ],
           "use_bitmap": false,
-          "weight": 3,
-          "weight_max": 15
+          "weight": 4,
+          "weight_max": 4
         }
       ]
     }'
