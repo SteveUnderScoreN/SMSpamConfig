@@ -34,7 +34,7 @@
     <name>Anonmails DNSBL</name>
     <domainLookup>spam.dnsbl.anonmails.de</domainLookup>
     <description>DNSBL spam.dnsbl.anonmails.de</description>
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -48,7 +48,7 @@
     <name>Barracuda Reputation Block List</name>
     <domainLookup>b.barracudacentral.org</domainLookup>
     <description>http://www.barracudanetworks.com/reputation</description>
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -104,7 +104,7 @@
     <name>DNSWL - High</name>
     <domainLookup>list.dnswl.org</domainLookup>
     <description>Never sends spam</description>
-    <weight>-6</weight>
+    <weight>-5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -174,7 +174,7 @@
     <name>Habeas SafeList 127.0.0.50</name>
     <domainLookup>accredit.habeas.com</domainLookup>
     <description>Return Path SenderScore Safe List - certified?</description>
-    <weight>-2</weight>
+    <weight>-5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -188,7 +188,7 @@
     <name>HostKarma - Blacklist</name>
     <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
     <description>HostKarma - Blacklist</description>
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -216,7 +216,7 @@
     <name>HostKarma - Whitelist</name>
     <domainLookup>hostkarma.junkemailfilter.com</domainLookup>
     <description>HostKarma - Whitelist</description>
-    <weight>-4</weight>
+    <weight>-5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -244,7 +244,7 @@
     <name>IBM DNS Blacklist</name>
     <domainLookup>dnsbl.cobion.com</domainLookup>
     <description />
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -286,8 +286,8 @@
     <name>SEM-FRESH</name>
     <domainLookup>fresh.spameatingmonkey.net</domainLookup>
     <description>List includes domains first registered in the last 5 days</description>
-    <weight>1</weight>
-    <maxweight>5</maxweight>
+    <weight>3</weight>
+    <maxweight>3</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.2</requiredIP>
@@ -300,8 +300,8 @@
     <name>SEM-URI</name>
     <domainLookup>uribl.spameatingmonkey.net</domainLookup>
     <description>List includes domains and URIs detected in mail sent to a spamtrap</description>
-    <weight>4</weight>
-    <maxweight>20</maxweight>
+    <weight>5</weight>
+    <maxweight>5</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.2</requiredIP>
@@ -314,7 +314,7 @@
     <name>Sender Score 0-9</name>
     <domainLookup>score.senderscore.com</domainLookup>
     <description>Bad reputation</description>
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -328,7 +328,7 @@
     <name>Sender Score 95-99</name>
     <domainLookup>score.senderscore.com</domainLookup>
     <description>Good reputation</description>
-    <weight>-4</weight>
+    <weight>-5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -440,7 +440,7 @@
     <name>SpamCop</name>
     <domainLookup>bl.spamcop.net</domainLookup>
     <description>SpamCop</description>
-    <weight>4</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -468,7 +468,7 @@
     <name>Spamhaus - PBL</name>
     <domainLookup>zen.spamhaus.org</domainLookup>
     <description>Spamhaus - PBL</description>
-    <weight>2</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -482,7 +482,7 @@
     <name>Spamhaus - PBL2</name>
     <domainLookup>zen.spamhaus.org</domainLookup>
     <description>Spamhaus - PBL2</description>
-    <weight>2</weight>
+    <weight>5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
@@ -538,8 +538,8 @@
     <name>Spamhaus DBL</name>
     <domainLookup>dbl.spamhaus.org</domainLookup>
     <description>https://www.spamhaus.org/dbl/</description>
-    <weight>4</weight>
-    <maxweight>20</maxweight>
+    <weight>5</weight>
+    <maxweight>5</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.1.2</requiredIP>
@@ -566,8 +566,8 @@
     <name>SURBL</name>
     <domainLookup>multi.surbl.org</domainLookup>
     <description>SURBL</description>
-    <weight>4</weight>
-    <maxweight>20</maxweight>
+    <weight>5</weight>
+    <maxweight>5</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.8, 127.0.0.16, 127.0.0.24, 127.0.0.64, 127.0.0.72, 127.0.0.80, 127.0.0.88, 127.0.0.96, 127.0.0.128, 127.0.0.136, 127.0.0.144, 127.0.0.152, 127.0.0.192, 127.0.0.200, 127.0.0.208, 127.0.0.216</requiredIP>
@@ -664,8 +664,8 @@
     <name>URIBL Black</name>
     <domainLookup>multi.uribl.com</domainLookup>
     <description>http://uribl.com/about.shtml. This list has a goal of zero false positives</description>
-    <weight>4</weight>
-    <maxweight>20</maxweight>
+    <weight>5</weight>
+    <maxweight>5</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.2</requiredIP>
@@ -678,8 +678,8 @@
     <name>URIBL Grey</name>
     <domainLookup>multi.uribl.com</domainLookup>
     <description>http://uribl.com/about.shtml. This list can and probably will cause false positives</description>
-    <weight>2</weight>
-    <maxweight>10</maxweight>
+    <weight>3</weight>
+    <maxweight>3</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.4</requiredIP>
@@ -692,8 +692,8 @@
     <name>URIBL Red</name>
     <domainLookup>multi.uribl.com</domainLookup>
     <description>http://uribl.com/about.shtml. This list is automated in nature, so please use at your own risk.</description>
-    <weight>3</weight>
-    <maxweight>15</maxweight>
+    <weight>4</weight>
+    <maxweight>4</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>True</isURIBL>
     <requiredIP>127.0.0.8</requiredIP>
