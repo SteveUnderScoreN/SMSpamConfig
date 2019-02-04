@@ -23,7 +23,7 @@ If the cumulative score of these tests is below 10 the email is delivered to the
 When using custom Spam checks with these settings a value of -3 is a recommended for any unwanted matches and a value of 3 is good for any rules that should weigh positively e.g. add 'handbags' with a value of 3 if your in the business of making/selling handbags.  
 
 ## Which settings to use
-If it's a new installation or you are planning to reset all non-custom Spam check settings and start from a fresh 2019 baseline then use 'Recommended Antispam options for SMxx'.
+If it's a new installation or you are planning to reset all non-custom Spam check settings and start from a fresh 2019 baseline then use 'Recommended Antispam options for SMxx'.  
 If you just want the recommended settings that calculate the weight of mail, including the latest services, removing retired services and including configuration fixes then use 'RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SMxx'. This will need testing along with the existing configured weight actions and any custom Spam checks. It is recommended that existing settings are increased/decreased to be brought closer to the values defined in the full recommended settings option.
 
 ## Adjusting threshold weight values
