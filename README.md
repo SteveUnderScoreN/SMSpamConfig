@@ -35,6 +35,10 @@ Settings/Antispam/Options/Options/Filtering/Medium Probability of Being Spam
 Settings/Antispam/Options/Options/Filtering/High Probability of Being Spam  
 Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
 ```
+## WARNING
+
+ALWAYS RESTART THE SMARTERMAIL SERVICE AFTER INPORTING ANTISPAM SETTINGS, SOME SETTINGS ARE HONOURED  
+BUT NEW RULES ARE NOT SO WITHOUT RESTARTING THE MAIL SERVICE YOU WILL SEE A SPIKE IN RECEIVED SPAM.
 
 ## Recommended Antispam options for SM16
 Export the current Antispam settings as a backup and import ['SM16 spamConfig-reset with recommended defaults.xml'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository.  
