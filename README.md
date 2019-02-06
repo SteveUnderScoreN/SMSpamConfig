@@ -94,7 +94,7 @@ https://exchange.xforce.ibmcloud.com/url/smartertools.com
 Any Mail that has been rejected due to DMARC can be found in the SMTP logs searching for 'DMARC processing'
 Any mail that has been processed by spool filtering can be found by searching the Delivery log using the following;  
   To find email delivered to the inbox search for 'Filter: None'  
-  To find email delivered to the junk email folder (SPAM-LOW) search for 'Filter: Move spam'  
+  To find email delivered to the junk email folder (SPAM-LOW) search for 'MoveToFolder Junk E-Mail'  
   To find all email deleted by spool filtering search for 'Filter: Spam'  
   To find email that would have been identified as SPAM-MED but was deleted by spool filtering search for 'Filter: Spam (Weight: 2'  
 To see the score assigned to an email look at the 'X-SmarterMail-Spam' and the 'X-SmarterMail-TotalSpamWeight' headers e.g. within the Webmail interface highlight an email, click 'Actions/View Header'
