@@ -6,13 +6,13 @@ non registered services on spool filtering (registered on both) along with inbou
 These settings are designed to reject any mail from IP addresses that achieve a total weight of 30 or above
 when the source address is test by;
 - Checking that a valid reverse DNS entry (PTR) exists
-- Checking the address listing on any block list enabled for 'Incoming SMTP' blocking
+- Checking the address listing on any block/white list enabled for 'Incoming SMTP' blocking
 - Checking the IP address against the SPF record of the domain from the envelope 'Mail From' header (senderEmail(1))
 - Checking for the 'Sender Score' of the IP address  
 
-If the cumulative score of these tests is 30 or above a response of 554 is sent to the source ad no mail is received into the system.  
-If the score is below 30 the email is received into the spool for further assessment by testing the following;
-- DMARC record lookup is performed against the domain in the email 'From' header (senderEmail(2)), if DMARC tests fail and the DMARC record policy is 'reject' the email is deleted and no further tests are performed
+If the cumulative score of these tests is 30 or above a response of 554 is sent to the source and the mail is not received into the  system.  
+If the score is below 30 the mail is received into the spool for further assessment by testing the following;
+- DMARC record lookup is performed against the domain in the email 'From' header (senderEmail(2)), if DMARC tests fail and the sending  domain's DMARC record policy is 'reject' the email is deleted and no further tests are performed
 - Rerunning all IP address tests enabled for 'Spool Filtering' which will be resolved from the DNS cache if the previous test produced a result
 - Assessment by the internal 'Spamassassin-Based Pattern Matching'
 - Analysis of the DKIM signature
@@ -37,8 +37,7 @@ Settings/Antispam/Options/Options/SMTP Blocking/Incoming Weight Threshold
 ```
 ## WARNING
 
-ALWAYS RESTART THE SMARTERMAIL SERVICE AFTER INPORTING ANTISPAM SETTINGS, SOME SETTINGS ARE HONOURED  
-BUT NEW RULES ARE NOT SO WITHOUT RESTARTING THE MAIL SERVICE YOU WILL SEE A SPIKE IN RECEIVED SPAM.
+ALWAYS RESTART THE SMARTERMAIL SERVICE AFTER INPORTING ANTISPAM SETTINGS, SOME SETTINGS ARE IMMEDIATELY HONOURED BUT NEW RULES ARE NOT SO WITHOUT RESTARTING THE MAIL SERVICE YOU WILL SEE A SPIKE IN RECEIVED SPAM.
 
 ## Recommended Antispam options for SM16
 Export the current Antispam settings as a backup and import ['SM16 spamConfig-reset with recommended defaults.xml'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository.  
@@ -74,7 +73,7 @@ Verify the configuration in the web interface.
 Export the current Antispam settings and take a copy of your exported spamConfig.json as a backup.  
 Download ['SM17 spamConfig updates.ps1'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository and modify the first line to reflect the location of the spamConfig.json file.  
 Run the script.  
-E.g. Run PowerShell_ISE.exe, open the script pane if needed (CTRL+R), select 'SM17 spamConfig updates.ps1' in this repository and click 'Raw', select all (CTRL+A), copy (CTRL+C) and paste the script into the PowerShell_ISE script pane (CTRL+V), modift line 1 to reflect the location of the spamConfig.json file to be modified and hit F5 to run the script.  
+E.g. Run PowerShell_ISE.exe, open the script pane if needed (CTRL+R), select 'SM17 spamConfig updates.ps1' in this repository and click 'Raw', select all (CTRL+A), copy (CTRL+C) and paste the script into the PowerShell_ISE script pane (CTRL+V), modify line 1 to reflect the location of the spamConfig.json file to be modified and hit F5 to run the script.  
 Import the modified spamConfig.json file into SM.  
 Verify the configuration in the web interface. 
 
@@ -91,7 +90,7 @@ http://multirbl.valli.org/lookup/104.171.117.108.html
 https://exchange.xforce.ibmcloud.com/ip/104.171.117.108
 https://exchange.xforce.ibmcloud.com/url/smartertools.com
 ````
-Any Mail that has been rejected due to DMARC can be found in the SMTP logs searching for 'DMARC processing'
+Any Mail that has been rejected due to DMARC can be found in the SMTP logs searching for 'DMARC processing'  
 Any mail that has been processed by spool filtering can be found by searching the Delivery log using the following;  
   To find email delivered to the inbox search for 'Filter: None'  
   To find email delivered to the junk email folder (SPAM-LOW) search for 'MoveToFolder Junk E-Mail'  
