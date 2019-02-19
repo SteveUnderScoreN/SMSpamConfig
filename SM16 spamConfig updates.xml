@@ -325,14 +325,14 @@
     <smtpoutgoingenabled>False</smtpoutgoingenabled>
   </SpamIp4rLookup>
   <SpamIp4rLookup>
-    <name>Sender Score 95-99</name>
+    <name>Sender Score 95-100</name>
     <domainLookup>score.senderscore.com</domainLookup>
     <description>Good reputation</description>
     <weight>-5</weight>
     <maxweight>30</maxweight>
     <useBitmap>False</useBitmap>
     <isURIBL>False</isURIBL>
-    <requiredIP>127.0.4.95, 127.0.4.96, 127.0.4.97, 127.0.4.98, 127.0.4.99</requiredIP>
+    <requiredIP>127.0.4.95, 127.0.4.96, 127.0.4.97, 127.0.4.98, 127.0.4.99, 127.0.4.100</requiredIP>
     <requireLookupMatch>True</requireLookupMatch>
     <enabled>True</enabled>
     <smtpenabled>True</smtpenabled>
