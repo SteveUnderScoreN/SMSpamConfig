@@ -481,7 +481,7 @@ $Ip4Lookups = '
         },
         {
           "guid": "fba1e776-6fed-4cfd-9f86-164c08c75bd6",
-          "name": "Sender Score 95-99",
+          "name": "Sender Score 95-100",
           "description": "Good reputation",
           "is_enabled": true,
           "is_enabled_smtp_in": true,
@@ -496,6 +496,7 @@ $Ip4Lookups = '
             "127.0.4.97",
             "127.0.4.98",
             "127.0.4.99"
+            "127.0.4.100"
           ],
           "use_bitmap": false,
           "weight": -5,
