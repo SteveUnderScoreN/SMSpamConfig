@@ -47,10 +47,28 @@ Settings/Antispam/Options/Options/Autoresponders                       - Require
 Settings/Antispam/Options/Options/Content Filter Bouncing              - Require message pass SPF  
 Settings/Antispam/Options/Options/Enable DMARC policy compliance check - Enabled  
 ```
+
+Add the 'No TLS' custom rule defined in the recommended Antispam options for SM17  
+
 Greylisting is not required when using these settings but it is not set to disabled when importing this policy.
 
 ## Recommended Antispam options for SM17
 Export the current Antispam settings as a backup and import ['SM17 spamConfig-reset with recommended defaults.json'](https://github.com/SteveUnderScoreN/SMSpamConfig/archive/master.zip) from this repository.  
+
+As the vast majority of Spam is sent without encryption add the following custom rule specific to the receiving server;  
+```
+Rule Name             'No TLS'  
+Rule Source           'Header'  
+Header                'Received'  
+Rule Source           'Contains'  
+Rule Text             '_<receivingdnsname.domain>_  with SMTP;'  
+Weight                '10'  
+EnableSpool filtering 'Enabled'  
+```
+Rule text example  
+```
+smtp.serverhosting.com with SMTP;  
+```
 
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM16
 Export the current Antispam settings and take a copy of your exported spamConfig.xml as a backup.  
