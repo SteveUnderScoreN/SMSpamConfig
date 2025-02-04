@@ -61,13 +61,11 @@ Rule Name             'No TLS'
 Rule Source           'Header'  
 Header                'Received'  
 Rule Source           'Contains'  
-Rule Text             '_<receivingdnsname.domain>_  with SMTP;'  
+Rule Text             '.example.com  with SMTP;'  
 Weight                '10'  
 EnableSpool filtering 'Enabled'  
 ```
-Rule text example  
-```
-smtp.serverhosting.com with SMTP;  
+Change .example.com to the the receiving donain name. 
 ```
 
 ## RBL/URIBL/Reverse DNS/Null Sender/SPF/Domain Keys/DKIM settings for SM16
